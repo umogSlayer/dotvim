@@ -1,3 +1,5 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 set background=dark
 set nocp
 set smartindent
