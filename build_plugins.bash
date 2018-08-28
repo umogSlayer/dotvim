@@ -13,8 +13,8 @@ popd
 
 DISTRIBUTOR_ID=$(lsb_release -i)
 
-if "$DISTRIBUTOR_ID" == "Distributor ID: openSUSE"; then
+if [ "$DISTRIBUTOR_ID" == "Distributor ID: openSUSE" ]; then
   zypper install rtags
-elif "$DISTRIBUTOR_ID" == "Distributor ID: Ubuntu"; then
+elif [ "$DISTRIBUTOR_ID" == "Distributor ID: Ubuntu" ]; then
   apt install rtags
 fi
