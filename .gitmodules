@@ -27,7 +27,7 @@
 	url = git://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/neomake"]
 	path = bundle/neomake
-	url = git://github.com/neomake/neomake.git
+	url = git://github.com/umogSlayer/neomake.git
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
