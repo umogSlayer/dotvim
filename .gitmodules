@@ -43,3 +43,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/gyp.vim"]
+	path = bundle/gyp.vim
+	url = git://github.com/kelan/gyp.vim
