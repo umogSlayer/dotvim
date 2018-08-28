@@ -75,7 +75,7 @@ set list
 autocmd BufWinEnter * set list
 
 nmap <F8> :TagbarToggle<CR>
-map <C-P> \t
+"map <C-P> \t
 let g:CommandTWildIgnore=&wildignore . ",**/boost/**,**/thirdparty/**,**/out_*/**,**/android/**"
 
 set grepprg=ag\ --vimgrep\ $*
@@ -165,3 +165,8 @@ let g:neomake_place_signs = 0
 let g:airline_solarized_bg = 'dark'
 
 set shell+=\ -O\ globstar
+
+let g:workspace_autosave = 0
+let g:workspace_autosave_untrailspaces = 0
+
+nnoremap <leader>w :ToggleWorkspace<CR>

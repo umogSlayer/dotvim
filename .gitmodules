@@ -37,3 +37,9 @@
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
 	url = git://github.com/klen/python-mode.git
+[submodule "bundle/vim-workspace"]
+	path = bundle/vim-workspace
+	url = git://github.com/thaerkh/vim-workspace.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
