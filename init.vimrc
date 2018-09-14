@@ -5,10 +5,10 @@ set nocp
 set smartindent
 filetype plugin on
 
-imap <C-K><C-K> <ESC>,c i
-vmap <C-K><C-K> ,c 
-nmap <C-K><C-K> ,c 
-vmap <C-K><C-L> ,cc
+imap <C-K><C-K> <ESC><leader>c i
+vmap <C-K><C-K> <leader>c 
+nmap <C-K><C-K> <leader>c 
+vmap <C-K><C-L> <leader>cc
 
 autocmd FileType cmake set omnifunc=cmakecomplete#Complete
 
