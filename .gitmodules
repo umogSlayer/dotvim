@@ -1,48 +1,48 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
-	url = git://github.com/tpope/vim-pathogen.git
+	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
+	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
-	url = git://github.com/tpope/vim-git.git
+	url = https://github.com/tpope/vim-git.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-rtags"]
 	path = bundle/vim-rtags
-	url = git://github.com/lyuts/vim-rtags.git
+	url = https://github.com/lyuts/vim-rtags.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
-	url = git://github.com/vim-airline/vim-airline.git
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
-	url = git://github.com/vim-airline/vim-airline-themes.git
+	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/neomake"]
 	path = bundle/neomake
-	url = git://github.com/umogSlayer/neomake.git
+	url = https://github.com/umogSlayer/neomake.git
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
-	url = git://github.com/wincent/Command-T.git
+	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
-	url = git://github.com/Valloric/YouCompleteMe.git
+	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
-	url = git://github.com/klen/python-mode.git
+	url = https://github.com/klen/python-mode.git
 [submodule "bundle/vim-workspace"]
 	path = bundle/vim-workspace
-	url = git://github.com/thaerkh/vim-workspace.git
+	url = https://github.com/thaerkh/vim-workspace.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
+	url = https://github.com/majutsushi/tagbar.git
 [submodule "bundle/gyp.vim"]
 	path = bundle/gyp.vim
-	url = git://github.com/kelan/gyp.vim
+	url = https://github.com/kelan/gyp.vim
