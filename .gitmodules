@@ -46,3 +46,7 @@
 [submodule "bundle/gyp.vim"]
 	path = bundle/gyp.vim
 	url = https://github.com/kelan/gyp.vim
+[submodule "bundle/vim-makejob"]
+	path = bundle/vim-makejob
+	url = https://github.com/djmoch/vim-makejob.git
+	branch = master
