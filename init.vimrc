@@ -12,6 +12,8 @@ vmap <C-K><C-L> <leader>cc
 
 autocmd FileType cmake set omnifunc=cmakecomplete#Complete
 
+let &cinoptions .= "(0,W2s"
+
 "set foldenable
 "set foldmethod=syntax
 "set foldcolumn=2
@@ -168,5 +170,6 @@ set shell+=\ -O\ globstar
 
 let g:workspace_autosave = 0
 let g:workspace_autosave_untrailspaces = 0
+let g:workspace_session_disable_on_args = 1
 
 nnoremap <leader>w :ToggleWorkspace<CR>
