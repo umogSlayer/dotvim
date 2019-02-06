@@ -50,3 +50,6 @@
 	path = bundle/vim-makejob
 	url = https://github.com/djmoch/vim-makejob.git
 	branch = master
+[submodule "bundle/vim-cpp-enhanced-highlight"]
+	path = bundle/vim-cpp-enhanced-highlight
+	url = https://github.com/octol/vim-cpp-enhanced-highlight.git

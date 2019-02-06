@@ -19,7 +19,7 @@ let &cinoptions .= "(0,W2s"
 "set foldcolumn=2
 "set foldlevel=1
 
-set noexpandtab
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set incsearch
