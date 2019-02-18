@@ -173,3 +173,7 @@ let g:workspace_autosave_untrailspaces = 0
 let g:workspace_session_disable_on_args = 1
 
 nnoremap <leader>w :ToggleWorkspace<CR>
+
+let g:fzf_command_prefix = 'FzF'
+
+nnoremap <leader>t :FzFFiles 
