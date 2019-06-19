@@ -4,12 +4,7 @@ set -euo pipefail
 
 SCRIPT_DIR=$(dirname $0)
 
-$SCRIPT_DIR/bundle/YouCompleteMe/install.py --clang-completer --ninja
-
-pushd $SCRIPT_DIR/bundle/Command-T/ruby/command-t/ext/command-t
-ruby extconf.rb
-make
-popd
+$SCRIPT_DIR/bundle/YouCompleteMe/install.py --clang-completer --clangd-completer --ninja
 
 #DISTRIBUTOR_ID=$(lsb_release -i)
 
