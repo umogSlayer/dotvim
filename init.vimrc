@@ -95,6 +95,18 @@ let g:pymode_rope_completion = 0
 let g:pymode_lint = 1
 
 let g:ycm_rust_src_path = "/home/umogslayer/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+let g:ycm_language_server =
+    \  [
+    \    {
+    \      'name': 'haskell',
+    \      'cmdline': ['hie-wrapper'],
+    \      'filetypes': ['haskell', 'hsl', 'hs'],
+    \      'project_root_files': ['stack.yaml'],
+    \    }
+    \  ]
+let g:ycm_semantic_triggers = {
+    \   'haskell': ['.'],
+    \ }
 
 let g:clang_tidy_path_to_build_dir = "/home/umogslayer/zenith/out_clang_stdc++/out/Debug"
 let g:clang_tidy_executable = "clang-tidy-4.0.1"
