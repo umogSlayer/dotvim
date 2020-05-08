@@ -163,7 +163,6 @@ function! ClangTidy()
 		echo "Can't detect file's compilation arguments and no previous clang-tidy invocation!"
 	endif
 endfunction
-
 command ClangTidy call ClangTidy()
 
 "map <S-C> :VBGcontinue<CR>
@@ -190,3 +189,6 @@ nnoremap <leader>w :ToggleWorkspace<CR>
 let g:fzf_command_prefix = 'FzF'
 
 nnoremap <leader>t :FzFFiles 
+
+" YouCompleteMe wants it for some reason
+set encoding=utf-8

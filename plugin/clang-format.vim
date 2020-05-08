@@ -4,8 +4,8 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 if exists("g:loaded_clang_format")
-	call s:restore_cpo()
-	finish
+  call s:restore_cpo()
+  finish
 endif
 
 let g:loaded_clang_format = 1
@@ -18,8 +18,8 @@ endfunction
 let s:path = expand('<sfile>:p:h') . "/../clang-format/clang-format.py"
 
 function! s:RunClangFormat() range abort
-	let exec_string = a:firstline . ',' . a:lastline . 'pyfile ' . s:path
-	exec exec_string
+  let exec_string = a:firstline . ',' . a:lastline . 'pyfile ' . s:path
+  exec exec_string
 endfunction
 
 command! -range=% ClangFormat <line1>,<line2>call s:RunClangFormat()
