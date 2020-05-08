@@ -1,5 +1,3 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
 set guicursor=
 set background=dark
 set nocp
@@ -48,13 +46,6 @@ au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl SetGLSLFileType
 if has('gui_running')
   set guifont=DejaVu\ Sans\ Mono\ 10
 endif
-
-set makeprg=env\ LANG=en_US.UTF8\ make
-
-filetype off
-
-call pathogen#infect()
-call pathogen#helptags()
 
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 
@@ -192,3 +183,17 @@ nnoremap <leader>t :FzFFiles
 
 " YouCompleteMe wants it for some reason
 set encoding=utf-8
+
+" Custom language-based initialization
+
+let g:cpp_initialized = 0
+function! s:InitializeCpp() abort
+    if g:cpp_initialized == 0
+        let g:cpp_initialized = 1
+        " set makeprg=env\ LANG=en_US.UTF8\ make
+        set makeprg=ninja
+    endif
+endfunction
+autocmd FileType cmake call s:InitializeCpp()
+autocmd FileType c call s:InitializeCpp()
+autocmd FileType cpp call s:InitializeCpp()

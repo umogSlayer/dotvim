@@ -1,58 +1,55 @@
-[submodule "bundle/vim-pathogen"]
-	path = bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+	path = pack/shared-plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
+	path = pack/shared-plugins/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-git"]
-	path = bundle/vim-git
+	path = pack/shared-plugins/start/vim-git
 	url = https://github.com/tpope/vim-git.git
 [submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
+	path = pack/shared-plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
+	path = pack/shared-plugins/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/vim-rtags"]
-	path = bundle/vim-rtags
+	path = pack/cpp-plugins/start/vim-rtags
 	url = https://github.com/lyuts/vim-rtags.git
 [submodule "bundle/vim-airline"]
-	path = bundle/vim-airline
+	path = pack/shared-plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule "bundle/vim-airline-themes"]
-	path = bundle/vim-airline-themes
+	path = pack/shared-plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/neomake"]
-	path = bundle/neomake
+	path = pack/cpp-plugins/start/neomake
 	url = https://github.com/umogSlayer/neomake.git
 [submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
+	path = pack/ycm/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/python-mode"]
-	path = bundle/python-mode
+	path = pack/python-plugins/start/python-mode
 	url = https://github.com/klen/python-mode.git
 [submodule "bundle/vim-workspace"]
-	path = bundle/vim-workspace
+	path = pack/shared-plugins/start/vim-workspace
 	url = https://github.com/thaerkh/vim-workspace.git
 [submodule "bundle/tagbar"]
-	path = bundle/tagbar
+	path = pack/shared-plugins/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
 [submodule "bundle/gyp.vim"]
-	path = bundle/gyp.vim
+	path = pack/cpp-plugins/start/gyp.vim
 	url = https://github.com/kelan/gyp.vim
 [submodule "bundle/vim-makejob"]
-	path = bundle/vim-makejob
+	path = pack/cpp-plugins/start/vim-makejob
 	url = https://github.com/foxik/vim-makejob.git
 	branch = master
 [submodule "bundle/vim-cpp-enhanced-highlight"]
-	path = bundle/vim-cpp-enhanced-highlight
+	path = pack/cpp-plugins/start/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
 [submodule "bundle/fzf"]
-	path = bundle/fzf
+	path = pack/shared-plugins/start/fzf
 	url = https://github.com/junegunn/fzf.git
 [submodule "bundle/fzf.vim"]
-	path = bundle/fzf.vim
+	path = pack/shared-plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
