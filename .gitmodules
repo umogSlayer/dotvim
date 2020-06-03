@@ -59,3 +59,12 @@
 [submodule "pack/omnisharp/opt/omnisharp-vim"]
 	path = pack/omnisharp/start/omnisharp-vim
 	url = https://github.com/OmniSharp/omnisharp-vim.git
+[submodule "pack/copy-paste/start/vim-subversive"]
+	path = pack/copy-paste/start/vim-subversive
+	url = https://github.com/svermeulen/vim-subversive.git
+[submodule "pack/copy-paste/start/vim-yoink"]
+	path = pack/copy-paste/start/vim-yoink
+	url = https://github.com/svermeulen/vim-yoink.git
+[submodule "pack/copy-paste/start/vim-cutlass"]
+	path = pack/copy-paste/start/vim-cutlass
+	url = https://github.com/svermeulen/vim-cutlass.git
