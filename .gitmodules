@@ -23,10 +23,10 @@
 	path = pack/shared-plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "bundle/neomake"]
-	path = pack/cpp-plugins/start/neomake
+	path = pack/cpp-plugins/opt/neomake
 	url = https://github.com/umogSlayer/neomake.git
 [submodule "bundle/YouCompleteMe"]
-	path = pack/ycm/start/YouCompleteMe
+	path = pack/ycm/opt/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/python-mode"]
 	path = pack/python-plugins/start/python-mode
@@ -41,7 +41,7 @@
 	path = pack/cpp-plugins/start/gyp.vim
 	url = https://github.com/kelan/gyp.vim
 [submodule "bundle/vim-makejob"]
-	path = pack/cpp-plugins/start/vim-makejob
+	path = pack/cpp-plugins/opt/vim-makejob
 	url = https://github.com/foxik/vim-makejob.git
 	branch = master
 [submodule "bundle/vim-cpp-enhanced-highlight"]
@@ -53,3 +53,9 @@
 [submodule "bundle/fzf.vim"]
 	path = pack/shared-plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "pack/build-plugins/start/dispatch"]
+	path = pack/build-plugins/start/dispatch
+	url = https://tpope.io/vim/dispatch.git
+[submodule "pack/omnisharp/opt/omnisharp-vim"]
+	path = pack/omnisharp/start/omnisharp-vim
+	url = https://github.com/OmniSharp/omnisharp-vim.git
