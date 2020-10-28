@@ -85,7 +85,6 @@ let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_lint = 1
 
-let g:ycm_rust_src_path = "/home/umogslayer/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 let g:ycm_language_server =
     \  [
     \    {
@@ -198,9 +197,25 @@ function! s:InitializeCpp() abort
     set makeprg=ninja
     packadd YouCompleteMe
 endfunction
+
+" Rust
+let g:rust_initialized = 0
+function! s:InitializeRust() abort
+    if g:rust_initialized == 1
+        return
+    endif
+
+    let g:rust_initialized = 1
+    " set makeprg=env\ LANG=en_US.UTF8\ make
+    set makeprg=cargo
+    packadd YouCompleteMe
+endfunction
+
+" Auto initialize stuff
 autocmd FileType cmake call s:InitializeCpp()
 autocmd FileType c call s:InitializeCpp()
 autocmd FileType cpp call s:InitializeCpp()
+autocmd FileType rust call s:InitializeRust()
 
 " C#
 " Use the stdio OmniSharp-roslyn server

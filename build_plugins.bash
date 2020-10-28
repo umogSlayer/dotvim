@@ -4,7 +4,7 @@ set -euo pipefail
 
 SCRIPT_DIR=$(dirname $0)
 
-$SCRIPT_DIR/pack/ycm/opt/YouCompleteMe/install.py --clang-completer --clangd-completer --ninja
+$SCRIPT_DIR/pack/ycm/opt/YouCompleteMe/install.py --clang-completer --clangd-completer --rust-completer --ninja
 
 #DISTRIBUTOR_ID=$(lsb_release -i)
 
