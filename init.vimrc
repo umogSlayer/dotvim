@@ -1,3 +1,8 @@
+if !has('nvim')
+    unlet! skip_defaults_vim
+    source $VIMRUNTIME/defaults.vim
+endif
+
 set guicursor=
 set background=dark
 set nocp
