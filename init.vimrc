@@ -322,30 +322,31 @@ endfunction
 autocmd FileType cs call s:InitializeCsharp()
 
 " Copy-paste configuration
+if 0
+    " Change default delete (i.e. cut) to 'x' button
+    nnoremap x d
+    xnoremap x d
 
-" Change default delete (i.e. cut) to 'x' button
-nnoremap x d
-xnoremap x d
+    nnoremap xx dd
+    nnoremap X D
 
-nnoremap xx dd
-nnoremap X D
+    " Integrate yoink with cutlass
+    let g:yoinkIncludeDeleteOperations = 1
 
-" Integrate yoink with cutlass
-let g:yoinkIncludeDeleteOperations = 1
+    " yoink configuration
+    nmap <leader>yn <plug>(YoinkPostPasteSwapBack)
+    nmap <leader>yp <plug>(YoinkPostPasteSwapForward)
 
-" yoink configuration
-nmap <leader>yn <plug>(YoinkPostPasteSwapBack)
-nmap <leader>yp <plug>(YoinkPostPasteSwapForward)
+    nmap p <plug>(YoinkPaste_p)
+    nmap P <plug>(YoinkPaste_P)
 
-nmap p <plug>(YoinkPaste_p)
-nmap P <plug>(YoinkPaste_P)
+    " subverse configuration
+    nmap s <plug>(SubversiveSubstitute)
+    nmap ss <plug>(SubversiveSubstituteLine)
+    nmap S <plug>(SubversiveSubstituteToEndOfLine)
 
-" subverse configuration
-nmap s <plug>(SubversiveSubstitute)
-nmap ss <plug>(SubversiveSubstituteLine)
-nmap S <plug>(SubversiveSubstituteToEndOfLine)
+    nmap <leader>s <plug>(SubversiveSubstituteRange)
+    xmap <leader>s <plug>(SubversiveSubstituteRange)
 
-nmap <leader>s <plug>(SubversiveSubstituteRange)
-xmap <leader>s <plug>(SubversiveSubstituteRange)
-
-nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
+    nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
+endif
