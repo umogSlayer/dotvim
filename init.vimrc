@@ -213,6 +213,9 @@ function! s:InitializeCpp() abort
     " set makeprg=env\ LANG=en_US.UTF8\ make
     set makeprg=ninja
     packadd YouCompleteMe
+    nnoremap <leader>yj :YcmCompleter GoTo<CR>
+    nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
+    nnoremap <leader>ys :YcmCompleter GoToSymbol 
 endfunction
 
 " Rust
@@ -226,6 +229,9 @@ function! s:InitializeRust() abort
     " set makeprg=env\ LANG=en_US.UTF8\ make
     set makeprg=cargo
     packadd YouCompleteMe
+    nnoremap <leader>yj :YcmCompleter GoTo<CR>
+    nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
+    nnoremap <leader>ys :YcmCompleter GoToSymbol 
 endfunction
 
 " Auto initialize stuff
