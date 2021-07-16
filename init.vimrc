@@ -150,7 +150,7 @@ endfunction
 
 function! ClangTidy()
 	let l:filename = expand('%')
-	if l:filename =~ '\.\(cpp\|cxx\|cc\|c\)$'
+	if l:filename =~ '\.\(cpp\|cxx\|cc\|c\|h\|hpp\|hxx\)$'
 		call ClangTidyImpl(g:clang_tidy_executable . " -p " . g:clang_tidy_path_to_build_dir . " " . l:filename)
 	elseif exists("g:clang_tidy_last_cmd")
 		call ClangTidyImpl(g:clang_tidy_last_cmd)
@@ -159,6 +159,18 @@ function! ClangTidy()
 	endif
 endfunction
 command ClangTidy call ClangTidy()
+
+function! ClangTidyFix()
+	let l:filename = expand('%')
+	if l:filename =~ '\.\(cpp\|cxx\|cc\|c\|h\|hpp\|hxx\)$'
+		call ClangTidyImpl(g:clang_tidy_executable . " -p " . g:clang_tidy_path_to_build_dir . " --fix " . l:filename)
+	elseif exists("g:clang_tidy_last_cmd")
+		call ClangTidyImpl(g:clang_tidy_last_cmd)
+	else
+		echo "Can't detect file's compilation arguments and no previous clang-tidy invocation!"
+	endif
+endfunction
+command ClangTidyFix call ClangTidyFix()
 
 "map <S-C> :VBGcontinue<CR>
 "map <C-B> :VBGtoggleBreakpointThisLine<CR>
