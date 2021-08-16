@@ -73,7 +73,7 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
 autocmd BufWinEnter * set list
 
-nmap <F8> :TagbarToggle<CR>
+"nmap <F8> :TagbarToggle<CR>
 "map <C-P> \t
 let g:CommandTWildIgnore=&wildignore . ",**/boost/**,**/thirdparty/**,**/out_*/**,**/android/**"
 
@@ -105,6 +105,8 @@ let g:ycm_semantic_triggers = {
 
 let g:clang_tidy_path_to_build_dir = "/home/umogslayer/OnyxCorp/build-desktop-clang"
 let g:clang_tidy_executable = "clang-tidy"
+
+let g:vimspector_enable_mappings = 'HUMAN'
 
 "function! ClangTidyImpl(cmd)
 	"if &autowrite | wall | endif
@@ -213,6 +215,7 @@ function! s:InitializeCpp() abort
     " set makeprg=env\ LANG=en_US.UTF8\ make
     set makeprg=ninja
     packadd YouCompleteMe
+    packadd vimspector
     nnoremap <leader>yj :YcmCompleter GoTo<CR>
     nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
     nnoremap <leader>ys :YcmCompleter GoToSymbol 
@@ -229,6 +232,7 @@ function! s:InitializeRust() abort
     " set makeprg=env\ LANG=en_US.UTF8\ make
     set makeprg=cargo
     packadd YouCompleteMe
+    packadd vimspector
     nnoremap <leader>yj :YcmCompleter GoTo<CR>
     nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
     nnoremap <leader>ys :YcmCompleter GoToSymbol 
