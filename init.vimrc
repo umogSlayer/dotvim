@@ -103,8 +103,8 @@ let g:ycm_semantic_triggers = {
     \   'haskell': ['.'],
     \ }
 
-let g:clang_tidy_path_to_build_dir = "/home/umogslayer/zenith/out_clang_stdc++/out/Debug"
-let g:clang_tidy_executable = "clang-tidy-4.0.1"
+let g:clang_tidy_path_to_build_dir = "/home/umogslayer/OnyxCorp/build-desktop-clang"
+let g:clang_tidy_executable = "clang-tidy"
 
 "function! ClangTidyImpl(cmd)
 	"if &autowrite | wall | endif
