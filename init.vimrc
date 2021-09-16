@@ -207,13 +207,14 @@ set encoding=utf-8
 " C/C++
 let g:cpp_initialized = 0
 function! s:InitializeCpp() abort
+    compiler ninja
+
     if g:cpp_initialized == 1
         return
     endif
 
     let g:cpp_initialized = 1
     " set makeprg=env\ LANG=en_US.UTF8\ make
-    set makeprg=ninja
     packadd YouCompleteMe
     packadd vimspector
     nnoremap <leader>yj :YcmCompleter GoTo<CR>
@@ -224,13 +225,14 @@ endfunction
 " Rust
 let g:rust_initialized = 0
 function! s:InitializeRust() abort
+    compiler cargo
+
     if g:rust_initialized == 1
         return
     endif
 
     let g:rust_initialized = 1
     " set makeprg=env\ LANG=en_US.UTF8\ make
-    set makeprg=cargo
     packadd YouCompleteMe
     packadd vimspector
     nnoremap <leader>yj :YcmCompleter GoTo<CR>
