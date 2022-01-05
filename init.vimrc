@@ -239,6 +239,7 @@ function! s:InitializeRust() abort
     nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
     nnoremap <leader>ys :YcmCompleter GoToSymbol 
 endfunction
+let g:rustfmt_autosave = 1
 
 " Auto initialize stuff
 autocmd FileType cmake call s:InitializeCpp()
