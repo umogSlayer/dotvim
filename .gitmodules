@@ -74,3 +74,6 @@
 [submodule "pack/vimspector/opt/vimspector"]
 	path = pack/vimspector/opt/vimspector
 	url = https://github.com/puremourning/vimspector.git
+[submodule "pack/shared-plugins/start/vim-abolish"]
+	path = pack/shared-plugins/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
