@@ -346,6 +346,8 @@ function! s:InitializeCsharp() abort
 endfunction
 autocmd FileType cs call s:InitializeCsharp()
 
+packadd matchit
+
 " Copy-paste configuration
 if 0
     " Change default delete (i.e. cut) to 'x' button
