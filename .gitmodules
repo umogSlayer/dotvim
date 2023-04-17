@@ -80,3 +80,6 @@
 [submodule "pack/markdown-plugins/start/markdown-preview.nvim"]
 	path = pack/markdown-plugins/start/markdown-preview.nvim
 	url = https://github.com/iamcco/markdown-preview.nvim.git
+[submodule "pack/qml-plugins/start/vim-qml"]
+	path = pack/qml-plugins/start/vim-qml
+	url = https://github.com/peterhoeg/vim-qml.git
