@@ -1,6 +1,3 @@
-[submodule "bundle/nerdtree"]
-	path = pack/shared-plugins/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
 	path = pack/shared-plugins/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -83,3 +80,6 @@
 [submodule "pack/qml-plugins/start/vim-qml"]
 	path = pack/qml-plugins/start/vim-qml
 	url = https://github.com/peterhoeg/vim-qml.git
+[submodule "pack/shared-plugins/start/vim-vinegar"]
+	path = pack/shared-plugins/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
