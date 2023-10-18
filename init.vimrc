@@ -219,7 +219,8 @@ function! s:InitializeCpp() abort
     packadd vimspector
     nnoremap <leader>yj :YcmCompleter GoTo<CR>
     nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
-    nnoremap <leader>ys :YcmCompleter GoToSymbol 
+    " nnoremap <leader>ys :YcmCompleter GoToSymbol 
+    nnoremap <leader>ys <Plug>(YCMFindSymbolInWorkspace)
 endfunction
 
 " Rust
@@ -377,3 +378,5 @@ if 0
 
     nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
 endif
+
+let g:is_bash = 1
