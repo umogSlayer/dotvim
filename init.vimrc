@@ -8,6 +8,7 @@ set background=dark
 set nocp
 set smartindent
 filetype plugin on
+colorscheme sonokai
 
 imap <C-K><C-K> <ESC><leader>c i
 vmap <C-K><C-K> <leader>c 
@@ -48,9 +49,6 @@ function SetGLSLFileType()
   endfor
 endfunction
 au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl SetGLSLFileType
-if has('gui_running')
-  set guifont=DejaVu\ Sans\ Mono\ 10
-endif
 
 set fileencodings=ucs-bom,utf-8,default,cp1251,latin1
 

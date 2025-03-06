@@ -7,12 +7,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = pack/shared-plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-colors-solarized"]
-	path = pack/shared-plugins/start/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/vim-rtags"]
-	path = pack/cpp-plugins/start/vim-rtags
-	url = https://github.com/lyuts/vim-rtags.git
 [submodule "bundle/vim-airline"]
 	path = pack/shared-plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -83,3 +77,6 @@
 [submodule "pack/shared-plugins/start/vim-vinegar"]
 	path = pack/shared-plugins/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule "pack/shared-plugins/start/sonokai"]
+	path = pack/shared-plugins/start/sonokai
+	url = https://github.com/sainnhe/sonokai.git
