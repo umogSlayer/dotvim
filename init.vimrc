@@ -238,13 +238,97 @@ function! s:InitializeRust() abort
     nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
     nnoremap <leader>ys :YcmCompleter GoToSymbol 
 endfunction
+
+" Python
+let g:python_initialized = 0
+function! s:InitializePython() abort
+    if g:python_initialized == 1
+        return
+    endif
+
+    let g:python_initialized = 1
+    " set makeprg=env\ LANG=en_US.UTF8\ make
+    packadd YouCompleteMe
+    nnoremap <leader>yj :YcmCompleter GoTo<CR>
+    nnoremap <leader>yf :YcmCompleter GoToReferences<CR>
+    nnoremap <leader>ys :YcmCompleter GoToSymbol 
+endfunction
+
 let g:rustfmt_autosave = 1
 
 " Auto initialize stuff
-autocmd FileType cmake call s:InitializeCpp()
-autocmd FileType c call s:InitializeCpp()
-autocmd FileType cpp call s:InitializeCpp()
-autocmd FileType rust call s:InitializeRust()
+if !has('nvim')
+    autocmd FileType cmake call s:InitializeCpp()
+    autocmd FileType c call s:InitializeCpp()
+    autocmd FileType cpp call s:InitializeCpp()
+    autocmd FileType rust call s:InitializeRust()
+    autocmd FileType python call s:InitializePython()
+    autocmd FileType cs call s:InitializeCsharp()
+    command! Format YcmCompleter Format
+else
+    set completeopt+=menuone,noinsert,popup
+    nnoremap <leader>yj :lua vim.lsp.buf.definition()<CR>
+    nnoremap <leader>yf :lua vim.lsp.buf.references()<CR>
+    nnoremap <leader>yd :lua vim.diagnostic.open_float()<CR>
+    nnoremap <leader>yt :ClangdSwitchSourceHeader<CR>
+    command! Format lua vim.lsp.buf.format()
+    autocmd FileType c,cpp,cmake compiler ninja
+    autocmd FileType rust compiler cargo
+    lua <<EOF
+    vim.lsp.config['cppls'] = {
+        cmd = { "clangd", "--background-index", "--clang-tidy", "--malloc-trim" },
+        filetypes = { 'c', 'cpp' },
+        root_markers = { 'compile_commands.json', '.clangd' },
+    }
+    vim.lsp.config['rustls'] = {
+        cmd = { "rust-analyzer" },
+        filetypes = { 'rust' },
+        root_markers = { 'Cargo.toml' },
+    }
+    vim.lsp.config['pythonls'] = {
+        cmd = { "pylsp" },
+        filetypes = { 'python' },
+    }
+    vim.lsp.config['qmlls'] = {
+        cmd = { "qmlls6" },
+        filetypes = { 'qml' },
+        root_markers = { '.qmlls.ini' },
+    }
+    vim.lsp.enable({ 'cppls', 'rustls', 'pythonls' })
+
+    group = vim.api.nvim_create_augroup('umogslayer.lsp', { clear = true }),
+    vim.api.nvim_create_autocmd('LspAttach', {
+        callback = function (args)
+            local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+            client.server_capabilities.semanticTokensProvider = nil
+            vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+        end,
+        group = 'umogslayer.lsp',
+    })
+    vim.api.nvim_create_autocmd('CursorHold', {
+        pattern = '*',
+        callback = function ()
+            for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+                if vim.api.nvim_win_get_config(winid).zindex then
+                    return
+                end
+            end
+            vim.diagnostic.open_float(0, {
+                scope = 'cursor',
+                focusable = false,
+                close_events = {
+                    "CursorMoved",
+                    "CursorMovedI",
+                    "BufHidden",
+                    "InsertCharPre",
+                    "WinLeave",
+                },
+            })
+        end,
+        group = 'umogslayer.lsp',
+    })
+EOF
+endif
 
 " C#
 " Use the stdio OmniSharp-roslyn server
@@ -343,7 +427,6 @@ function! s:InitializeCsharp() abort
     nnoremap <Leader>ss :OmniSharpStartServer<CR>
     nnoremap <Leader>sp :OmniSharpStopServer<CR>
 endfunction
-autocmd FileType cs call s:InitializeCsharp()
 
 packadd matchit
 

@@ -19,9 +19,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = pack/ycm/opt/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "bundle/python-mode"]
-	path = pack/python-plugins/start/python-mode
-	url = https://github.com/klen/python-mode.git
 [submodule "bundle/vim-workspace"]
 	path = pack/shared-plugins/start/vim-workspace
 	url = https://github.com/thaerkh/vim-workspace.git
@@ -80,3 +77,6 @@
 [submodule "pack/shared-plugins/start/sonokai"]
 	path = pack/shared-plugins/start/sonokai
 	url = https://github.com/sainnhe/sonokai.git
+[submodule "pack/cpp-plugins/start/clangd_extensions.nvim"]
+	path = pack/cpp-plugins/start/clangd_extensions.nvim
+	url = https://github.com/p00f/clangd_extensions.nvim.git
