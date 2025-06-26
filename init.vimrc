@@ -15,7 +15,7 @@ vmap <C-K><C-K> <leader>c
 nmap <C-K><C-K> <leader>c 
 vmap <C-K><C-L> <leader>cc
 
-autocmd FileType cmake set omnifunc=cmakecomplete#Complete
+"autocmd FileType cmake set omnifunc=cmakecomplete#Complete
 
 let &cinoptions .= "(0,W2s"
 
@@ -75,7 +75,7 @@ autocmd BufWinEnter * set list
 "map <C-P> \t
 let g:CommandTWildIgnore=&wildignore . ",**/boost/**,**/thirdparty/**,**/out_*/**,**/android/**"
 
-set grepprg=ag\ --vimgrep\ $*
+set grepprg=rg\ --vimgrep\ $*
 set grepformat=%f:%l:%c:%m
 
 let g:load_doxygen_syntax=1
@@ -279,6 +279,9 @@ else
         cmd = { "clangd", "--background-index", "--clang-tidy", "--malloc-trim" },
         filetypes = { 'c', 'cpp' },
         root_markers = { 'compile_commands.json', '.clangd' },
+        reuse_client = function (client, config)
+            return true
+        end,
     }
     vim.lsp.config['rustls'] = {
         cmd = { "rust-analyzer" },
@@ -294,7 +297,20 @@ else
         filetypes = { 'qml' },
         root_markers = { '.qmlls.ini' },
     }
-    vim.lsp.enable({ 'cppls', 'rustls', 'pythonls' })
+    vim.lsp.config['neocmake'] = {
+        cmd = { "neocmakelsp", "--stdio" },
+        filetypes = { 'cmake' },
+        root_markers = { '.neocmake' },
+        init_options = {
+            format = {
+                enable = true,
+            },
+            lint = {
+                enable = false,
+            },
+        },
+    }
+    vim.lsp.enable({ 'cppls', 'rustls', 'pythonls', 'neocmake' })
 
     group = vim.api.nvim_create_augroup('umogslayer.lsp', { clear = true }),
     vim.api.nvim_create_autocmd('LspAttach', {
