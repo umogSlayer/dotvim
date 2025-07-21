@@ -280,7 +280,7 @@ else
         filetypes = { 'c', 'cpp' },
         root_markers = { 'compile_commands.json', '.clangd' },
         reuse_client = function (client, config)
-            return true
+            return client.config.name == config.name
         end,
     }
     vim.lsp.config['rustls'] = {
