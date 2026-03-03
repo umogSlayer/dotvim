@@ -80,3 +80,12 @@
 [submodule "pack/cpp-plugins/start/clangd_extensions.nvim"]
 	path = pack/cpp-plugins/start/clangd_extensions.nvim
 	url = https://github.com/p00f/clangd_extensions.nvim.git
+[submodule "pack/telescope/opt/telescope.nvim"]
+	path = pack/telescope/opt/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "pack/telescope/opt/plenary.nvim"]
+	path = pack/telescope/opt/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "pack/cmake-plugins/opt/cmake-tools.nvim"]
+	path = pack/cmake-plugins/opt/cmake-tools.nvim
+	url = https://github.com/Civitasv/cmake-tools.nvim.git

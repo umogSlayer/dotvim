@@ -8,7 +8,15 @@ set background=dark
 set nocp
 set smartindent
 filetype plugin on
-colorscheme sonokai
+
+if has('nvim')
+    packadd! sonokai
+    colorscheme sonokai
+
+    packadd plenary.nvim
+    packadd telescope.nvim
+    packadd cmake-tools.nvim
+endif
 
 imap <C-K><C-K> <ESC><leader>c i
 vmap <C-K><C-K> <leader>c 
@@ -343,6 +351,11 @@ else
         end,
         group = 'umogslayer.lsp',
     })
+    -- Configure other plugins
+    require("cmake-tools").setup {
+        cmake_use_preset = true,
+        cmake_regenerate_on_save = false,
+    }
 EOF
 endif
 
