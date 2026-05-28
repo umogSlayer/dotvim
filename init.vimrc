@@ -15,6 +15,7 @@ if has('nvim')
 
     packadd plenary.nvim
     packadd telescope.nvim
+    packadd telescope-ui-select.nvim
     packadd cmake-tools.nvim
 endif
 
@@ -355,7 +356,10 @@ else
     require("cmake-tools").setup {
         cmake_use_preset = true,
         cmake_regenerate_on_save = false,
+        cmake_build_options = { "-j12" },
     }
+    require("telescope").setup {}
+    require("telescope").load_extension("ui-select")
 EOF
 endif
 

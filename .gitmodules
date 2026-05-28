@@ -89,3 +89,6 @@
 [submodule "pack/cmake-plugins/opt/cmake-tools.nvim"]
 	path = pack/cmake-plugins/opt/cmake-tools.nvim
 	url = https://github.com/Civitasv/cmake-tools.nvim.git
+[submodule "pack/telescope/opt/telescope-ui-select.nvim"]
+	path = pack/telescope/opt/telescope-ui-select.nvim
+	url = https://github.com/nvim-telescope/telescope-ui-select.nvim.git
